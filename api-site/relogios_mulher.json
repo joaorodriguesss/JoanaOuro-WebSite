@@ -1,0 +1,33 @@
+[
+    {
+      "_id": 3,
+      "nome": "Relógio Mulher 1",
+      "funcoes": "cronógrafo",
+      "movimento": "quartzo",
+      "resistencia": "3 ATM",
+      "tipo_mostrador": "analógico",
+      "cor_mostrador": "branco",
+      "cor_bracelete": "dourado",
+      "material_bracelete": "aço inoxidável",
+      "cor_caixa": "dourado",
+      "material_caixa": "aço inoxidável",
+      "genero": "mulher",
+      "dimensoes_caixa": "38 mm"
+    },
+    {
+      "_id": 4,
+      "nome": "Relógio Mulher 2",
+      "funcoes": "data",
+      "movimento": "quartzo",
+      "resistencia": "5 ATM",
+      "tipo_mostrador": "analógico",
+      "cor_mostrador": "rosa",
+      "cor_bracelete": "rosa",
+      "material_bracelete": "couro",
+      "cor_caixa": "prateado",
+      "material_caixa": "aço inoxidável",
+      "genero": "mulher",
+      "dimensoes_caixa": "36 mm"
+    }
+  ]
+  

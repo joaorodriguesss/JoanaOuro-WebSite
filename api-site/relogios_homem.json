@@ -1,0 +1,33 @@
+[
+    {
+      "_id": 1,
+      "nome": "Relógio Homem 1",
+      "funcoes": "cronógrafo",
+      "movimento": "quartzo",
+      "resistencia": "5 ATM",
+      "tipo_mostrador": "analógico",
+      "cor_mostrador": "preto",
+      "cor_bracelete": "prateado",
+      "material_bracelete": "aço inoxidável",
+      "cor_caixa": "prateado",
+      "material_caixa": "aço inoxidável",
+      "genero": "homem",
+      "dimensoes_caixa": "42 mm"
+    },
+    {
+      "_id": 2,
+      "nome": "Relógio Homem 2",
+      "funcoes": "data",
+      "movimento": "automático",
+      "resistencia": "10 ATM",
+      "tipo_mostrador": "digital",
+      "cor_mostrador": "azul",
+      "cor_bracelete": "preto",
+      "material_bracelete": "borracha",
+      "cor_caixa": "preto",
+      "material_caixa": "plástico",
+      "genero": "homem",
+      "dimensoes_caixa": "44 mm"
+    }
+  ]
+  

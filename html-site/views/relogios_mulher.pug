@@ -1,0 +1,96 @@
+extends layout
+
+block content
+  h2.text-center.title-margin Relógios de Mulher
+
+  .breadcrumbs.text-center
+    p
+      a(href='/') Home
+      |  / 
+      a(href='/relogios') Relógios
+      |  / 
+      a Mulher
+
+  .filter-bar
+    p
+      | Ordenar por:
+      select
+        option Popularidade
+        option Nome
+        option Preço
+        option Novidades
+
+  .product-list
+    .products
+      each relogio in relogios
+        .product
+          img(src=`/images/${relogio.imagem}` alt=`${relogio.nome}`)
+          h3= relogio.nome
+          p= relogio.preco
+          p= relogio.funcoes
+          p= relogio.movimento
+          p= relogio.resistencia
+
+  style.
+    .text-center {
+      text-align: center;
+      margin: 20px 0;
+    }    .text-center {
+      margin: 50px 0 0px 0; /* Reduza a margem superior e ajuste conforme necessário */
+      text-align: center;
+    }
+
+    .title-margin {
+      margin-bottom: 10px; /* Ajuste este valor conforme necessário */
+    }
+
+    .breadcrumbs {
+      margin: 10px 0 20px 0; /* Reduza a margem superior e ajuste conforme necessário */
+      font-size: 14px;
+    }
+
+    .breadcrumbs a {
+      color: #000; /* Define a cor do texto do link como preto */
+      //- text-decoration: none; /* Remove o sublinhado dos links */
+    }
+
+    .breadcrumbs a:visited {
+      color: #000; /* Mantém a cor do texto como preto mesmo após a visita */
+    }
+
+    .breadcrumbs a:hover, .breadcrumbs a:active {
+      color: #000; /* Mantém a cor do texto como preto ao passar o mouse ou ao clicar */
+    }
+
+    .filter-bar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+    }
+
+    .product-list {
+      padding: 20px;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .product {
+      width: calc(25% - 20px);
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 10px;
+      transition: transform 0.2s;
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }

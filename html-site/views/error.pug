@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1.w3-container.w3-red
+    | Error
+  h2= error.status
+  pre= error.stack
+  p
+    | Something went wrong.

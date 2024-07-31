@@ -16,4 +16,4 @@ const relogioSchema = new mongoose.Schema({
     dimensoes_caixa: String
 }, { versionKey: false });
 
-module.exports = mongoose.model('Relogio', relogioSchema, 'relogios_homem');
+module.exports = mongoose.model('Relogio', relogioSchema, 'relogios');

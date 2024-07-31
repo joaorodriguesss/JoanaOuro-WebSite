@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    title JoanaOuro
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:wght@700&display=swap')
+    link(rel='stylesheet' href='/stylesheets/style.css')
+    link(rel='icon', href='/favicon.ico', type='image/x-icon')
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+    script(src='/javascripts/banner.js')
+  body
+    header
+      nav.navbar
+        .search-logo
+          .search-bar
+            input(type='text' placeholder='O que procura?')
+            button(type='submit')
+              i.fa.fa-search
+        .logo
+          a(href='/') JoanaOuro
+        .menu-icons
+          .icons
+            a(href='/login')
+              i.fa.fa-user
+            a(href='/wishlist')
+              i.fa.fa-heart
+            a(href='/cart')
+              i.fa.fa-shopping-cart
+      .menu
+        ul
+          li.promo
+            a(href='/promocoes') Promoções
+          li
+            a(href='/joias') Joias
+          li
+            a(href='/relogios') Relógios
+          li
+            a(href='/noivado-casamento') Noivado e Casamento
+
+    block content
+
+    footer
+      p &copy; 2024 JoanaOuro

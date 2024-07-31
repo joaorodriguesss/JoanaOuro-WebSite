@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  .breadcrumbs
+    p
+      a(href='/') Home
+      |  / 
+      a(href='/produtos') Produtos
+      |  / 
+      a(href=`/produtos/${produto._id}`)= produto.nome
+
+  .product-details
+    img(src=`/images/${produto.imagem}` alt=`${produto.nome}`)
+    h2= produto.nome
+    p= produto.preco
+    p Funções: #{produto.funcoes}
+    p Movimento: #{produto.movimento}
+    p Resistência: #{produto.resistencia}
+    p Tipo de Mostrador: #{produto.tipo_mostrador}
+    p Cor do Mostrador: #{produto.cor_mostrador}
+    p Cor da Bracelete: #{produto.cor_bracelete}
+    p Material da Bracelete: #{produto.material_bracelete}
+    p Cor da Caixa: #{produto.cor_caixa}
+    p Material da Caixa: #{produto.material_caixa}
+    p Dimensões da Caixa: #{produto.dimensoes_caixa}
+
+  style.
+    .product-details {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .product-details img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .product-details h2 {
+      margin-bottom: 20px;
+    }
+
+    .product-details p {
+      margin: 5px 0;
+    }
+

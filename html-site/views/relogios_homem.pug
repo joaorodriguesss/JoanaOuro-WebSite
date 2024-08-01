@@ -26,11 +26,12 @@ block content
         .product
           a(href=`/produtos/${relogio._id}`)
             img(src=`/images/${relogio.imagem}` alt=`${relogio.nome}`)
-            h3= relogio.nome
+            h3= relogio.marca
+            p= relogio.nome
             p= relogio.preco
-            p= relogio.funcoes
-            p= relogio.movimento
-            p= relogio.resistencia
+            //- p= relogio.funcoes
+            //- p= relogio.movimento
+            //- p= relogio.resistencia
 
   style.
     .text-center {
@@ -94,4 +95,17 @@ block content
 
     .product:hover {
       transform: scale(1.05);
+    }
+
+    .product a {
+      color: #000; /* Define a cor do texto do link como preto */
+      text-decoration: none; /* Remove o sublinhado dos links */
+    }
+
+    .product a:visited {
+      color: #000; /* Mantém a cor do texto como preto mesmo após a visita */
+    }
+
+    .product a:hover, .product a:active {
+      color: #000; /* Mantém a cor do texto como preto ao passar o mouse ou ao clicar */
     }

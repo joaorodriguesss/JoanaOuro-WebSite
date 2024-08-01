@@ -1,46 +1,155 @@
 extends layout
 
 block content
-  .breadcrumbs
+  h2.text-center.title-margin #{produto.nome}
+
+  .breadcrumbs.text-center
     p
       a(href='/') Home
       |  / 
-      a(href='/produtos') Produtos
+      a(href='/relogios') Relógios
       |  / 
-      a(href=`/produtos/${produto._id}`)= produto.nome
+      a(href='/relogios/homem') Homem
+      //- |  / 
+      //- span #{produto.nome}
 
-  .product-details
-    img(src=`/images/${produto.imagem}` alt=`${produto.nome}`)
-    h2= produto.nome
-    p= produto.preco
-    p Funções: #{produto.funcoes}
-    p Movimento: #{produto.movimento}
-    p Resistência: #{produto.resistencia}
-    p Tipo de Mostrador: #{produto.tipo_mostrador}
-    p Cor do Mostrador: #{produto.cor_mostrador}
-    p Cor da Bracelete: #{produto.cor_bracelete}
-    p Material da Bracelete: #{produto.material_bracelete}
-    p Cor da Caixa: #{produto.cor_caixa}
-    p Material da Caixa: #{produto.material_caixa}
-    p Dimensões da Caixa: #{produto.dimensoes_caixa}
+  .product-container
+    .product-image
+      img(src=`/images/${produto.imagem}` alt=`${produto.nome}`)
+    .product-info
+      .favorite-container
+        .favorite-icon
+          i.fa.fa-heart
+      //- h2= produto.nome
+      p= produto.preco
+      .details
+        //- .detail
+        //-   span Detalhes:
+        .detail
+          span Funções:
+          span #{produto.funcoes}
+        .detail
+          span Movimento:
+          span #{produto.movimento}
+        .detail
+          span Resistência:
+          span #{produto.resistencia}
+        .detail
+          span Tipo de Mostrador:
+          span #{produto.tipo_mostrador}
+        .detail
+          span Cor do Mostrador:
+          span #{produto.cor_mostrador}
+        .detail
+          span Cor da Bracelete:
+          span #{produto.cor_bracelete}
+        .detail
+          span Material da Bracelete:
+          span #{produto.material_bracelete}
+        .detail
+          span Cor da Caixa:
+          span #{produto.cor_caixa}
+        .detail
+          span Material da Caixa:
+          span #{produto.material_caixa}
+        .detail
+          span Dimensões da Caixa:
+          span #{produto.dimensoes_caixa}
+        .detail
+          span Gênero:
+          span #{produto.genero}
 
   style.
-    .product-details {
+    .text-center {
       text-align: center;
+      margin: 20px 0;
+    }    .text-center {
+      margin: 50px 0 0px 0; /* Reduza a margem superior e ajuste conforme necessário */
+      text-align: center;
+    }
+
+    .title-margin {
+      margin-bottom: 10px; /* Ajuste este valor conforme necessário */
+    }
+
+    .breadcrumbs {
+      margin: 10px 0 20px 0; 
+      font-size: 14px;
+    }
+
+    .breadcrumbs a {
+      color: #000;
+    }
+
+    .breadcrumbs a:visited {
+      color: #000;
+    }
+
+    .breadcrumbs a:hover, .breadcrumbs a:active {
+      color: #000;
+    }
+
+    .product-container {
+      display: flex;
+      justify-content: center;
       margin: 20px;
     }
 
-    .product-details img {
-      max-width: 100%;
-      height: auto;
+    .product-image {
+      flex: 1; 
+      text-align: center;
+      max-height: 600px; /* Define uma largura máxima */
+    }
+
+    .product-image img {
+      max-height: 100%;
+      width: 600px; /* Define uma altura fixa para a imagem */
+      object-fit: contain; /* Ajusta a imagem para caber dentro do contêiner mantendo a proporção */
       margin-bottom: 20px;
     }
 
-    .product-details h2 {
+    .product-info {
+      flex: 1;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    .product-info h2 {
       margin-bottom: 20px;
     }
 
-    .product-details p {
+    .product-info p {
       margin: 5px 0;
     }
 
+    .details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .detail {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+    }
+
+    .detail span:first-child {
+      font-weight: bold;
+    }
+
+    .favorite-container {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+    }
+
+    .favorite-icon {
+      font-size: 24px;
+      cursor: pointer;
+      color: #000;
+      transition: color 0.3s;
+    }
+
+    .favorite-icon:hover {
+      color: goldenrod; /* Cor do ícone ao passar o mouse */
+    }

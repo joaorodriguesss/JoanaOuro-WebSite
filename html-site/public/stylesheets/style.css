@@ -185,6 +185,36 @@ body {
   margin: 0 auto;
 }
 
+.product-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.product-image {
+  flex: 1;
+  text-align: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.product-info {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.product-info h2 {
+  margin-bottom: 20px;
+}
+
+.product-info p {
+  margin: 5px 0;
+}
+
 footer {
   text-align: center;
   padding: 20px 0;
